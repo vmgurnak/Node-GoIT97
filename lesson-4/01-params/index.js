@@ -1,4 +1,4 @@
-import express from "express";
+import express from 'express';
 
 const app = express();
 
@@ -14,12 +14,13 @@ const app = express();
 //   res.send("Book 3");
 // });
 
-app.get("/books/:bookId", (req, res) => {
-  const { bookId } = req.params;
+app.get('/books/:bookId/comments/:commentId', (req, res) => {
+  console.log(req.params);
+  const { bookId, commentId } = req.params;
 
-  res.send(`Book ${bookId}`);
+  res.send(`Book ${bookId}, Comment ${commentId}`);
 });
 
 app.listen(8080, () => {
-  console.log("Server stated on port 8080");
+  console.log('Server stated on port 8080');
 });

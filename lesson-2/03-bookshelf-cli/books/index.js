@@ -1,11 +1,11 @@
-import * as fs from "node:fs/promises";
-import path from "node:path";
-import crypto from "node:crypto";
+import * as fs from 'node:fs/promises';
+import path from 'node:path';
+import crypto from 'node:crypto';
 
-const filePath = path.resolve("books", "books.json");
+const filePath = path.resolve('books', 'books.json');
 
 async function readBooks() {
-  const data = await fs.readFile(filePath, { encoding: "utf-8" });
+  const data = await fs.readFile(filePath, { encoding: 'utf-8' });
 
   return JSON.parse(data);
 }
@@ -25,7 +25,7 @@ async function getBook(id) {
 
   const book = books.find((book) => book.id === id);
 
-  if (typeof book === "undefined") {
+  if (typeof book === 'undefined') {
     return null;
   }
 

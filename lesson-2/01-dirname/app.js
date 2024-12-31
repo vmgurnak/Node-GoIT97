@@ -1,4 +1,4 @@
-const movies = require("./movies");
+const movies = require('./movies/index.js');
 
 movies
   .readMovies()

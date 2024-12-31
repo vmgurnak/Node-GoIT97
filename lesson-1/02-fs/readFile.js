@@ -1,8 +1,8 @@
-const fs = require("node:fs/promises");
+const fs = require('node:fs/promises');
 
-console.log("Before");
+console.log('Before');
 
-// fs.readFile("read.txt", { encoding: "utf-8" }, (err, data) => {
+// fs.readFile('read.txt', { encoding: 'utf-8' }, (err, data) => {
 //   if (err) {
 //     throw err;
 //   }
@@ -12,8 +12,8 @@ console.log("Before");
 //   console.log(data);
 // });
 
-fs.readFile("read.txt", { encoding: "utf-8" })
+fs.readFile('read.txt', { encoding: 'utf-8' })
   .then((data) => console.log(data))
   .catch((error) => console.error(error));
 
-console.log("After");
+console.log('After');
